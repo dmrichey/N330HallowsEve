@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: d8f1b72bb2fee4142ab76eea35398a9e, type: 2}
   m_LightingSettings: {fileID: 4890085278179872738, guid: 198ccac3da524b040a28f7db4e699c94, type: 2}
 --- !u!196 &4
 NavMeshSettings:
@@ -701,6 +701,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MetalFence (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7523326004118467986, guid: 917e5ca93f46903478f42cecbf51279e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 917e5ca93f46903478f42cecbf51279e, type: 3}
 --- !u!4 &323984671 stripped
@@ -1115,6 +1119,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MetalFence (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 7523326004118467986, guid: 917e5ca93f46903478f42cecbf51279e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 917e5ca93f46903478f42cecbf51279e, type: 3}
 --- !u!1001 &464794862
@@ -1410,7 +1418,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!65 &649410642
 BoxCollider:
@@ -1583,6 +1591,68 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 650517260}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &668181739
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 668181742}
+  - component: {fileID: 668181741}
+  - component: {fileID: 668181740}
+  m_Layer: 0
+  m_Name: Post-process Volume
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &668181740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 668181739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b9a305e18de0c04dbd257a21cd47087, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sharedProfile: {fileID: 11400000, guid: d9dbcb7cf70b0884aa389c2cfe3aeb4e, type: 2}
+  isGlobal: 1
+  blendDistance: 0
+  weight: 1
+  priority: 0
+--- !u!65 &668181741
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 668181739}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &668181742
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 668181739}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 456.59238, y: 9.70609, z: 602.41437}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &682847505
 GameObject:
   m_ObjectHideFlags: 0
@@ -2351,6 +2421,10 @@ PrefabInstance:
     - target: {fileID: 3389948751166426116, guid: 74c12208d68af9246b39b8a9de80fb9c, type: 3}
       propertyPath: m_Name
       value: WoodFence (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3389948751166426116, guid: 74c12208d68af9246b39b8a9de80fb9c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 74c12208d68af9246b39b8a9de80fb9c, type: 3}
@@ -3321,6 +3395,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WoodFence
       objectReference: {fileID: 0}
+    - target: {fileID: 3389948751166426116, guid: 74c12208d68af9246b39b8a9de80fb9c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 74c12208d68af9246b39b8a9de80fb9c, type: 3}
 --- !u!4 &1369695104 stripped
@@ -3605,7 +3683,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!108 &1581431199
 Light:
@@ -3618,7 +3696,7 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 0.4245283, g: 0.4245283, b: 0.4245283, a: 1}
+  m_Color: {r: 0.254717, g: 0.254717, b: 0.254717, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
@@ -3658,10 +3736,10 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 1
+  m_BounceIntensity: 2
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
@@ -3809,6 +3887,7 @@ GameObject:
   - component: {fileID: 1698050942}
   - component: {fileID: 1698050941}
   - component: {fileID: 1698050940}
+  - component: {fileID: 1698050943}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -3881,6 +3960,66 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 26.329, y: -158.8, z: 0}
+--- !u!114 &1698050943
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1698050939}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 948f4100a11a5c24981795d21301da5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volumeTrigger: {fileID: 1698050942}
+  volumeLayer:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  stopNaNPropagation: 1
+  finalBlitToCameraTarget: 0
+  antialiasingMode: 1
+  temporalAntialiasing:
+    jitterSpread: 0.75
+    sharpness: 0.25
+    stationaryBlending: 0.95
+    motionBlending: 0.85
+  subpixelMorphologicalAntialiasing:
+    quality: 2
+  fastApproximateAntialiasing:
+    fastMode: 1
+    keepAlpha: 0
+  fog:
+    enabled: 1
+    excludeSkybox: 1
+  debugLayer:
+    lightMeter:
+      width: 512
+      height: 256
+      showCurves: 1
+    histogram:
+      width: 512
+      height: 256
+      channel: 3
+    waveform:
+      exposure: 0.12
+      height: 256
+    vectorscope:
+      size: 256
+      exposure: 0.12
+    overlaySettings:
+      linearDepth: 0
+      motionColorIntensity: 4
+      motionGridSize: 64
+      colorBlindnessType: 0
+      colorBlindnessStrength: 1
+  m_Resources: {fileID: 11400000, guid: d82512f9c8e5d4a4d938b575d47f88d4, type: 2}
+  m_ShowToolkit: 0
+  m_ShowCustomSorter: 0
+  breakBeforeColorGrading: 0
+  m_BeforeTransparentBundles: []
+  m_BeforeStackBundles: []
+  m_AfterStackBundles: []
 --- !u!1 &1748830619
 GameObject:
   m_ObjectHideFlags: 0
@@ -4383,6 +4522,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MetalFence
       objectReference: {fileID: 0}
+    - target: {fileID: 7523326004118467986, guid: 917e5ca93f46903478f42cecbf51279e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 917e5ca93f46903478f42cecbf51279e, type: 3}
 --- !u!1001 &1950509840
@@ -4443,6 +4586,10 @@ PrefabInstance:
     - target: {fileID: 3389948751166426116, guid: 74c12208d68af9246b39b8a9de80fb9c, type: 3}
       propertyPath: m_Name
       value: WoodFence (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3389948751166426116, guid: 74c12208d68af9246b39b8a9de80fb9c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 74c12208d68af9246b39b8a9de80fb9c, type: 3}
@@ -5046,6 +5193,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock02
       objectReference: {fileID: 0}
+    - target: {fileID: 1356044688960391618, guid: 9c57008a41101974eaf1527690f44d21, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 1844914374745674616, guid: 9c57008a41101974eaf1527690f44d21, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -5159,6 +5310,10 @@ PrefabInstance:
     - target: {fileID: 2855186989427284145, guid: 0e23f996e6a982b4395cc85b05f16e2d, type: 3}
       propertyPath: m_Name
       value: GraveStone2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2855186989427284145, guid: 0e23f996e6a982b4395cc85b05f16e2d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 3230340818976965131, guid: 0e23f996e6a982b4395cc85b05f16e2d, type: 3}
       propertyPath: m_RootOrder
@@ -5318,6 +5473,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock01
       objectReference: {fileID: 0}
+    - target: {fileID: 4337057561313223160, guid: 6687011103e8b3b45a7e9c8c998a03f3, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6687011103e8b3b45a7e9c8c998a03f3, type: 3}
 --- !u!1001 &3740024804771466056
@@ -5387,6 +5546,10 @@ PrefabInstance:
     - target: {fileID: 3671303067268475399, guid: 7bdc71b12b564cc40bd507a7757cb5e4, type: 3}
       propertyPath: m_Name
       value: Tree
+      objectReference: {fileID: 0}
+    - target: {fileID: 3671303067268475399, guid: 7bdc71b12b564cc40bd507a7757cb5e4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 4159292082288505021, guid: 7bdc71b12b564cc40bd507a7757cb5e4, type: 3}
       propertyPath: m_RootOrder
@@ -5730,6 +5893,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LargeWall
       objectReference: {fileID: 0}
+    - target: {fileID: 4666907358221786899, guid: c9985386ddd317747a2d8730d8bcdb68, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 5444851024139847081, guid: c9985386ddd317747a2d8730d8bcdb68, type: 3}
       propertyPath: m_RootOrder
       value: 31
@@ -5787,6 +5954,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree02
       objectReference: {fileID: 0}
+    - target: {fileID: 4726824033673109948, guid: 7eb725f4017f2fc4fb8a8736c2e25260, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 5391615549214898950, guid: 7eb725f4017f2fc4fb8a8736c2e25260, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -5843,6 +6014,10 @@ PrefabInstance:
     - target: {fileID: 6126734582428836800, guid: a050a2f7519ac7e438167c9b8a948b49, type: 3}
       propertyPath: m_Name
       value: Rock03
+      objectReference: {fileID: 0}
+    - target: {fileID: 6126734582428836800, guid: a050a2f7519ac7e438167c9b8a948b49, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 6795184207518103930, guid: a050a2f7519ac7e438167c9b8a948b49, type: 3}
       propertyPath: m_RootOrder
@@ -6002,6 +6177,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PathBoardsBroken
       objectReference: {fileID: 0}
+    - target: {fileID: 6441579138471409400, guid: aad80eb3f9d03654f9d91009c834aeaa, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aad80eb3f9d03654f9d91009c834aeaa, type: 3}
 --- !u!1001 &7791580434646032534
@@ -6059,6 +6238,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PathBoards
       objectReference: {fileID: 0}
+    - target: {fileID: 6911983574451862936, guid: c209d8fb507c157409b05f02b96263e8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c209d8fb507c157409b05f02b96263e8, type: 3}
 --- !u!1001 &8170912476530112988
@@ -6115,6 +6298,10 @@ PrefabInstance:
     - target: {fileID: 9053783684328597659, guid: 58013b1e1e691714db7ff6ae454d2eeb, type: 3}
       propertyPath: m_Name
       value: GraveStone1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9053783684328597659, guid: 58013b1e1e691714db7ff6ae454d2eeb, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 58013b1e1e691714db7ff6ae454d2eeb, type: 3}
@@ -6230,6 +6417,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock04
       objectReference: {fileID: 0}
+    - target: {fileID: 8727343736085066784, guid: 0ee08c898d71dc449aa77c7dca241b77, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ee08c898d71dc449aa77c7dca241b77, type: 3}
 --- !u!1001 &8936796254795627788
@@ -6299,6 +6490,10 @@ PrefabInstance:
     - target: {fileID: 8283220357187520684, guid: 9fd0e3ecadf475b48afdf20a287b8b8f, type: 3}
       propertyPath: m_Name
       value: Shop
+      objectReference: {fileID: 0}
+    - target: {fileID: 8283220357187520684, guid: 9fd0e3ecadf475b48afdf20a287b8b8f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 8770823684408611350, guid: 9fd0e3ecadf475b48afdf20a287b8b8f, type: 3}
       propertyPath: m_RootOrder
