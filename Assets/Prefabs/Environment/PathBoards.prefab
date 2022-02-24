@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6100016689174931234}
   - component: {fileID: 7136031989705402503}
   - component: {fileID: 4966538005916818509}
+  - component: {fileID: 4760157109363785085}
   m_Layer: 0
   m_Name: PathBoards
   m_TagString: Untagged
@@ -81,3 +82,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &4760157109363785085
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6911983574451862936}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5.5507874, y: 0.16691984, z: 2.3489134}
+  m_Center: {x: 0.040391684, y: -0.018662907, z: 0.0004901886}
