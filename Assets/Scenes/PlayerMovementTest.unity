@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748171, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -347,6 +347,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 486145495}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &834236663 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 834236663, guid: 9027edfce1987e548be4952503378912, type: 3}
+  m_PrefabInstance: {fileID: 8304889088276529667}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &931731938
 GameObject:
   m_ObjectHideFlags: 0
@@ -874,11 +879,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3309587417216694463, guid: 1a81c2ce9304a674b87f2dc47204a2ff, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -1.1593819e-36
+      value: -2.4520972e-31
       objectReference: {fileID: 0}
     - target: {fileID: 3309587417216694463, guid: 1a81c2ce9304a674b87f2dc47204a2ff, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 3.5099707e-38
+      value: 3.4756484e-33
       objectReference: {fileID: 0}
     - target: {fileID: 3309587417496343812, guid: 1a81c2ce9304a674b87f2dc47204a2ff, type: 3}
       propertyPath: m_FollowOffset.y
@@ -990,7 +995,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3309587418974625117, guid: 1a81c2ce9304a674b87f2dc47204a2ff, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3309587418974625117, guid: 1a81c2ce9304a674b87f2dc47204a2ff, type: 3}
       propertyPath: m_LocalRotation.z
@@ -1011,11 +1016,15 @@ PrefabInstance:
       objectReference: {fileID: 931731941}
     - target: {fileID: 8304889087086162761, guid: 9027edfce1987e548be4952503378912, type: 3}
       propertyPath: runSpeed
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 8304889087086162761, guid: 9027edfce1987e548be4952503378912, type: 3}
+      propertyPath: invisMesh
+      value: 
+      objectReference: {fileID: 834236663}
+    - target: {fileID: 8304889087086162761, guid: 9027edfce1987e548be4952503378912, type: 3}
       propertyPath: walkSpeed
-      value: 5
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8304889087086162762, guid: 9027edfce1987e548be4952503378912, type: 3}
       propertyPath: m_RootOrder
@@ -1064,10 +1073,6 @@ PrefabInstance:
     - target: {fileID: 8304889087086162763, guid: 9027edfce1987e548be4952503378912, type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 8304889087086162766, guid: 9027edfce1987e548be4952503378912, type: 3}
-      propertyPath: m_UpdateMode
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9027edfce1987e548be4952503378912, type: 3}
