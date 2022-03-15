@@ -6,15 +6,59 @@ public class EnemyType : MonoBehaviour
 {
     public int type;
 
+    public GameObject torch;
+    public GameObject pitchfork;
+
+    private Animator anim;
+
+    public GameObject maleMesh;
+    public GameObject femaleMesh;
+
+
     // Start is called before the first frame update
     void Start()
     {
-        type = Mathf.Abs(Random.Range(-3, 4));
+        anim = GetComponent<Animator>();
+
+        type = Random.Range(0, 2);
+
+
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (type == 0)
+        {
+            torch.SetActive(false);
+            pitchfork.SetActive(true);
+
+            anim.SetFloat("weaponType", 0.0f);
+        }
+
+        if (type == 1)
+        {
+            torch.SetActive(true);
+            pitchfork.SetActive(false);
+
+            anim.SetFloat("weaponType", 1.0f);
+        }
+
+        if (type == 2)
+        {
+            torch.SetActive(false);
+            pitchfork.SetActive(true);
+
+            anim.SetFloat("weaponType", 0.0f);
+        }
+
+        if (type == 3)
+        {
+            torch.SetActive(true);
+            pitchfork.SetActive(false);
+
+            anim.SetFloat("weaponType", 1.0f);
+        }
     }
 }
