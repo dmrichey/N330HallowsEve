@@ -1,0 +1,60 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+
+public class Gate : MonoBehaviour
+{
+    public float fadeDuration = 1.5f;
+    public float displayImageDuration = 1.5f;
+    public GameObject player;
+    public CanvasGroup winImageCanvasGroup; 
+    public CanvasGroup loseBackgroundImageCanvasGroup;
+
+    bool m_IsPlayerAtExit;
+    bool m_IsPlayerCaught;
+    float m_Timer;
+    
+    void OnTriggerEnter (Collider other)
+    {
+        if (other.gameObject == player)
+        {
+            m_IsPlayerAtExit = true;
+        }
+    }
+
+    public void CaughtPlayer ()
+    {
+        m_IsPlayerCaught = true;
+    }
+
+    void Update ()
+    {
+        if (m_IsPlayerAtExit)
+        {
+            EndLevel (winImageCanvasGroup, false);
+        }
+        else if (m_IsPlayerCaught)
+        {
+            EndLevel (loseBackgroundImageCanvasGroup, true);
+        }
+    }
+
+    void EndLevel (CanvasGroup imageCanvasGroup, bool doRestart)
+    {
+        m_Timer += Time.deltaTime;
+        imageCanvasGroup.alpha = m_Timer / fadeDuration;
+
+        if (m_Timer > fadeDuration + displayImageDuration)
+        {
+            if (doRestart)
+            {
+                SceneManager.LoadScene (0);
+            }
+            else
+            {
+                Application.Quit ();
+            }
+        }
+    }
+}
