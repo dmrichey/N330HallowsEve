@@ -504,11 +504,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3309587418587957501, guid: 1a81c2ce9304a674b87f2dc47204a2ff, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 2.084037e-22
+      value: -1e-45
       objectReference: {fileID: 0}
     - target: {fileID: 3309587418587957501, guid: 1a81c2ce9304a674b87f2dc47204a2ff, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -1.4642162e-23
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3309587418974625117, guid: 1a81c2ce9304a674b87f2dc47204a2ff, type: 3}
       propertyPath: m_LocalRotation.w
@@ -520,11 +520,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3309587418974625117, guid: 1a81c2ce9304a674b87f2dc47204a2ff, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -6.4728317e-22
+      value: 1e-45
       objectReference: {fileID: 0}
     - target: {fileID: 3309587418974625117, guid: 1a81c2ce9304a674b87f2dc47204a2ff, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 3.746314e-23
+      value: -0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a81c2ce9304a674b87f2dc47204a2ff, type: 3}
@@ -29024,7 +29024,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1698050939}
-  m_LocalRotation: {x: 0.044345673, y: -9.682127e-10, z: -4.2977965e-11, w: 0.9990163}
+  m_LocalRotation: {x: 0.044345673, y: 9.682127e-10, z: 4.2977965e-11, w: 0.9990163}
   m_LocalPosition: {x: 494.834, y: 2.5999975, z: 509.36914}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -29871,11 +29871,11 @@ PrefabInstance:
       objectReference: {fileID: 1698050942}
     - target: {fileID: 2378121743280681761, guid: d435d3a133478f84b92fb338862066e8, type: 3}
       propertyPath: runSpeed
-      value: 6
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2378121743280681761, guid: d435d3a133478f84b92fb338862066e8, type: 3}
       propertyPath: walkSpeed
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2777155666343482460, guid: d435d3a133478f84b92fb338862066e8, type: 3}
       propertyPath: m_RootOrder
@@ -32688,6 +32688,10 @@ PrefabInstance:
       propertyPath: gameEnder
       value: 
       objectReference: {fileID: 1397962004}
+    - target: {fileID: 1839331510, guid: 9be2aea51dcbf694e84cf59e6f1d7313, type: 3}
+      propertyPath: m_Speed
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1839331511, guid: 9be2aea51dcbf694e84cf59e6f1d7313, type: 3}
       propertyPath: waypoints.Array.data[0]
       value: 
