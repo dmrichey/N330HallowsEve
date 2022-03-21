@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Level1Wolf.unity
+    guid: 1100a12ecdf4290488e0ba9e8d2e1c6d
   m_configObjects: {}
