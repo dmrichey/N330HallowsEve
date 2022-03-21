@@ -5844,7 +5844,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7368386009957025547}
   - component: {fileID: 3205229513542620558}
-  - component: {fileID: 6541388585147101198}
+  - component: {fileID: 1605193171}
   m_Layer: 0
   m_Name: EnemyPov
   m_TagString: Untagged
@@ -5860,8 +5860,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4895842606785261675}
   m_LocalRotation: {x: 0.71510214, y: -0, z: -0, w: 0.69902}
-  m_LocalPosition: {x: 0.059999466, y: 2.123, z: 1.6720009}
-  m_LocalScale: {x: 0.72733, y: 1.8036, z: -4.6038084}
+  m_LocalPosition: {x: -0.12, y: 1.52, z: 3.936}
+  m_LocalScale: {x: 2, y: 7, z: 2}
   m_Children: []
   m_Father: {fileID: 6789366860431485737}
   m_RootOrder: 4
@@ -5879,20 +5879,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.7975082, y: 1.1464475, z: 1}
   m_Center: {x: -0.098646276, y: 0.07322326, z: 9.770556e-12}
---- !u!64 &6541388585147101198
-MeshCollider:
+--- !u!114 &1605193171
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4895842606785261675}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0d36ce8c546f4f4d973cb9db74948f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  gameEnder: {fileID: 0}
 --- !u!1 &4985145428187028219
 GameObject:
   m_ObjectHideFlags: 0
@@ -6126,6 +6126,7 @@ GameObject:
   - component: {fileID: 6463250737843309764}
   - component: {fileID: 1839331510}
   - component: {fileID: 1839331511}
+  - component: {fileID: 1902364816}
   m_Layer: 0
   m_Name: Enemy1
   m_TagString: Untagged
@@ -6179,7 +6180,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6157403226785427859}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.29995865
   m_Height: 2.2767494
@@ -6240,6 +6241,20 @@ MonoBehaviour:
   waypoints:
   - {fileID: 0}
   - {fileID: 0}
+--- !u!114 &1902364816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6157403226785427859}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0d36ce8c546f4f4d973cb9db74948f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  gameEnder: {fileID: 0}
 --- !u!1 &6353817918696255008
 GameObject:
   m_ObjectHideFlags: 0
