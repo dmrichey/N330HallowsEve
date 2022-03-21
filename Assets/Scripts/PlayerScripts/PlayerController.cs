@@ -19,9 +19,9 @@ public class PlayerController : MonoBehaviour
     Quaternion              m_rotation = Quaternion.identity;
     bool                    m_isMoving;
     float                   m_invisDuration = 5.0f;
-    float                   m_invisCooldown = 30.0f;
+    float                   m_invisCooldown = 15.0f;
     float                   m_invisTimer = 0.0f;
-    bool                    m_isInvisible;
+    public bool             m_isInvisible;
 
     // Start is called before the first frame update
     void Start()

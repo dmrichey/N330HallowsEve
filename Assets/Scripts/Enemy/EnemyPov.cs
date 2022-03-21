@@ -5,24 +5,30 @@ using UnityEngine;
 public class EnemyPov : MonoBehaviour
 {
     public Transform player;
+    PlayerController playerControl;
     public Gate gameEnder;
 
-    bool m_IsPlayerInRange;
+    bool m_IsPlayerInRange = false;
 
 
 		// if it collides with  the player object set the inrange to be true
     void OnTriggerEnter (Collider other){
-        if (other.transform == player){
+
+        playerControl = other.gameObject.GetComponent<PlayerController>();
+
+        if (player != null) {
             m_IsPlayerInRange = true;
         }
 		}//end OnTriggerEnter
 
     void OnTriggerExit (Collider other){
-        if (other.transform == player)
+        playerControl = other.gameObject.GetComponent<PlayerController>();
+
+        if (player != null)
         {
             m_IsPlayerInRange = false;
         }
-		}// end OnTriggerEnter
+    }// end OnTriggerEnter
 
     void Update (){
         if (m_IsPlayerInRange){
@@ -33,7 +39,7 @@ public class EnemyPov : MonoBehaviour
 			// if the raycast(which is the size of the pov box collider because thats what the script is set to) hits the player than it calls the script that ends the game.
             if(Physics.Raycast(ray, out raycastHit))
             {
-                if (raycastHit.collider.transform == player)
+                if (raycastHit.collider.transform == player && !playerControl.m_isInvisible)
                 {
 					gameEnder.CaughtPlayer ();
                 }
