@@ -5,36 +5,39 @@ using UnityEngine.SceneManagement;
 
 public class Gate : MonoBehaviour
 {
-    public float fadeDuration = 1.5f;
-    public float displayImageDuration = 1.5f;
-    public GameObject player;
+    public float fadeDuration = 1f;
+    public float displayImageDuration = 1f;
+    //player
+	public GameObject player;
+	
+	// images 
     public CanvasGroup winImageCanvasGroup; 
     public CanvasGroup loseBackgroundImageCanvasGroup;
-
-    bool m_IsPlayerAtExit;
-    bool m_IsPlayerCaught;
-    float m_Timer;
+	//checks to see if they are at the exit or caught.
+    bool atExit;
+    bool isCaught;
+    float timer;
     
     void OnTriggerEnter (Collider other)
     {
         if (other.gameObject == player)
         {
-            m_IsPlayerAtExit = true;
+            atExit = true;
         }
     }
 
     public void CaughtPlayer ()
     {
-        m_IsPlayerCaught = true;
+        isCaught = true;
     }
 
     void Update ()
     {
-        if (m_IsPlayerAtExit)
+        if (atExit)
         {
             EndLevel (winImageCanvasGroup, false);
         }
-        else if (m_IsPlayerCaught)
+        else if (isCaught)
         {
             EndLevel (loseBackgroundImageCanvasGroup, true);
         }
@@ -42,10 +45,12 @@ public class Gate : MonoBehaviour
 
     void EndLevel (CanvasGroup imageCanvasGroup, bool doRestart)
     {
-        m_Timer += Time.deltaTime;
-        imageCanvasGroup.alpha = m_Timer / fadeDuration;
-
-        if (m_Timer > fadeDuration + displayImageDuration)
+		// display the image for a certain amount of time 
+        timer += Time.deltaTime;
+        imageCanvasGroup.alpha = timer / fadeDuration;
+		
+		// once the image is done restart or quit
+        if (timer > fadeDuration + displayImageDuration)
         {
             if (doRestart)
             {
@@ -53,7 +58,7 @@ public class Gate : MonoBehaviour
             }
             else
             {
-                Application.Quit ();
+                SceneManager.LoadScene (0);
             }
         }
     }

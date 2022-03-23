@@ -5,8 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class Gate : MonoBehaviour
 {
-    public float fadeDuration = 1.5f;
-    public float displayImageDuration = 1.5f;
+    public float fadeDuration = .75f;
+    public float displayImageDuration = .75f;
     //player
 	public GameObject player;
 	
@@ -58,7 +58,7 @@ public class Gate : MonoBehaviour
             }
             else
             {
-                Application.Quit ();
+                SceneManager.LoadScene (0);
             }
         }
     }
