@@ -15,13 +15,19 @@ public class PlayerController : MonoBehaviour
     CharacterController     m_char;
     public GameObject       mesh;
     public GameObject       invisMesh;
+    public GameObject       grayscale;
+    
     Vector3                 m_movement;
     Quaternion              m_rotation = Quaternion.identity;
     bool                    m_isMoving;
     float                   m_invisDuration = 5.0f;
     float                   m_invisCooldown = 15.0f;
     float                   m_invisTimer = 0.0f;
+    float                   m_thermDuration = 5.0f;
+    float                   m_thermCooldown = 15.0f;
+    float                   m_thermTimer = 0.0f;
     public bool             m_isInvisible;
+    public bool             m_thermalVision;
 
     // Start is called before the first frame update
     void Start()
@@ -35,6 +41,7 @@ public class PlayerController : MonoBehaviour
     {
         // Timer to handle invisibility
         m_invisTimer += Time.deltaTime;
+        m_thermTimer += Time.deltaTime;
 
         // -- HANDLE MOVEMENT
         float horizontal = Input.GetAxisRaw("Horizontal");
@@ -90,22 +97,44 @@ public class PlayerController : MonoBehaviour
             {
                 m_isInvisible = true;
                 m_invisTimer = 0.0f;
+                SetInvisible(m_isInvisible);
             }
         }
 
-        if (m_invisTimer >= m_invisDuration)
+        if (m_invisTimer >= m_invisDuration && m_isInvisible)
         {
             m_isInvisible = false;
+            SetInvisible(m_isInvisible);
         }
 
-        if (m_isInvisible)
+        // -- HANDLE THERMAL VISION
+        if (Input.GetKeyDown(KeyCode.E))
         {
-            mesh.SetActive(false);
-            invisMesh.SetActive(true);
-        } else
-        {
-            mesh.SetActive(true);
-            invisMesh.SetActive(false );
+            if (m_thermTimer >= m_thermCooldown)
+            {
+                m_thermalVision = true;
+                m_thermTimer = 0.0f;
+                SetThermal(m_thermalVision);
+            }
         }
+
+        if (m_thermTimer >= m_thermDuration && m_thermalVision)
+        {
+            m_thermalVision = false;
+            SetThermal(m_thermalVision);
+        }
+    }
+
+    void SetInvisible(bool x)
+    {
+        mesh.SetActive(!x);
+        invisMesh.SetActive(x);
+    }
+
+    void SetThermal(bool x)
+    {
+        grayscale.SetActive(x);
+        // Find All Enemies
+        // Toggle Meshes
     }
 }
