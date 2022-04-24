@@ -39,7 +39,7 @@ public class EnemyPov : MonoBehaviour
 			// if the raycast(which is the size of the pov box collider because thats what the script is set to) hits the player than it calls the script that ends the game.
             if(Physics.Raycast(ray, out raycastHit))
             {
-                if (raycastHit.collider.transform == player && !playerControl.m_isInvisible)
+                if (raycastHit.collider.transform == player && !PlayerController.m_isInvisible)
                 {
 					gameEnder.CaughtPlayer ();
                 }
