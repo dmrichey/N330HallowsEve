@@ -6222,7 +6222,7 @@ GameObject:
   - component: {fileID: 1902364816}
   m_Layer: 0
   m_Name: Enemy1
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6297,7 +6297,7 @@ MonoBehaviour:
   torch: {fileID: 967139964475454406}
   pitchfork: {fileID: 2468476984001905676}
   maleMesh: {fileID: 7009943714057177504}
-  femaleMesh: {fileID: 0}
+  thermalMesh: {fileID: 8095890289938403809}
 --- !u!195 &1839331510
 NavMeshAgent:
   m_ObjectHideFlags: 0

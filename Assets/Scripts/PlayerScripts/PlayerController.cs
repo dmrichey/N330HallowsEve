@@ -16,17 +16,20 @@ public class PlayerController : MonoBehaviour
     public GameObject       mesh;
     public GameObject       invisMesh;
     public GameObject       grayscale;
-    
+    public GameObject[] enemies = null;
+
     Vector3                 m_movement;
     Quaternion              m_rotation = Quaternion.identity;
     bool                    m_isMoving;
-    public static float                   m_invisDuration = 5.0f;
-    public static float                   m_invisCooldown = 15.0f;
-    public static float                   m_invisTimer = 0.0f;
+
+    public static float     m_invisDuration = 5.0f;
+    public static float     m_invisCooldown = 15.0f;
+    public static float     m_invisTimer = 0.0f;
+    static public bool      m_isInvisible;
+
     float                   m_thermDuration = 5.0f;
     float                   m_thermCooldown = 15.0f;
-    float                   m_thermTimer = 0.0f;
-    static public bool             m_isInvisible;
+    float                   m_thermTimer = 0.0f;    
     public bool             m_thermalVision;
 
     // Start is called before the first frame update
@@ -34,6 +37,8 @@ public class PlayerController : MonoBehaviour
     {
         m_anim = GetComponent<Animator>();
         m_char = GetComponent<CharacterController>();
+
+        enemies = GameObject.FindGameObjectsWithTag("Enemy");
     }
 
     // Update is called once per frame
@@ -125,16 +130,21 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    void SetInvisible(bool x)
+    void SetInvisible(bool state)
     {
-        mesh.SetActive(!x);
-        invisMesh.SetActive(x);
+        mesh.SetActive(!state);
+        invisMesh.SetActive(state);
     }
 
-    void SetThermal(bool x)
+    void SetThermal(bool state)
     {
-        grayscale.SetActive(x);
+        grayscale.SetActive(state);
         // Find All Enemies
-        // Toggle Meshes
+        for (int i = 0; i < enemies.Length; i++)
+        {
+            // Toggle Meshes
+            enemies[i].GetComponent<EnemyType>().ToggleThermal(state);
+        }
+
     }
 }

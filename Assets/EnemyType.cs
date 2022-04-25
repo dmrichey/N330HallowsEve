@@ -12,7 +12,7 @@ public class EnemyType : MonoBehaviour
     private Animator anim;
 
     public GameObject maleMesh;
-    public GameObject femaleMesh;
+    public GameObject thermalMesh;
 
 
     // Start is called before the first frame update
@@ -21,9 +21,6 @@ public class EnemyType : MonoBehaviour
         anim = GetComponent<Animator>();
 
         type = Random.Range(0, 2);
-
-
-
     }
 
     // Update is called once per frame
@@ -60,5 +57,10 @@ public class EnemyType : MonoBehaviour
 
             anim.SetFloat("weaponType", 1.0f);
         }
+    }
+
+    public void ToggleThermal(bool state)
+    {
+        thermalMesh.SetActive(state);
     }
 }
