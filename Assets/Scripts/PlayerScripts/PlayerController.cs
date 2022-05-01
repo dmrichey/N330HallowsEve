@@ -25,12 +25,12 @@ public class PlayerController : MonoBehaviour
     public static float     m_invisDuration = 5.0f;
     public static float     m_invisCooldown = 15.0f;
     public static float     m_invisTimer = 0.0f;
-    static public bool      m_isInvisible;
+    public static bool      m_isInvisible;
 
-    float                   m_thermDuration = 5.0f;
-    float                   m_thermCooldown = 15.0f;
-    float                   m_thermTimer = 0.0f;    
-    public bool             m_thermalVision;
+    public static float     m_thermDuration = 5.0f;
+    public static float     m_thermCooldown = 10.0f;
+    public static float     m_thermTimer = 0.0f;    
+    public static bool      m_thermalVision;
 
     // Start is called before the first frame update
     void Start()
